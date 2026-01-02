@@ -14,6 +14,9 @@
 > uvicorn main:app --reload
 > pip install sqlalchemy
 > brew install sqlite3
+> pip install passlib
+> pip install bcrypt==4.0.1
+> pip install python-multipart
 ```
 
 ```Sqlite
