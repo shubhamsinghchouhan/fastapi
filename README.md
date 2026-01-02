@@ -1,6 +1,8 @@
 # Fastapi Commands
 
+```Shell
 > python3 -m pip --version
+
 > python3 -m venv fastapienv
 > source venv/bin/activate
 > deactivate
@@ -12,7 +14,9 @@
 > uvicorn main:app --reload
 > pip install sqlalchemy
 > brew install sqlite3
+```
 
+```Sqlite
 ~/projects/fastapi/TodoApp (main*) » sqlite3 todos.db
 SQLite version 3.51.0 2025-06-12 13:14:41
 Enter ".help" for usage hints.
@@ -45,8 +49,8 @@ sqlite> select * from todos;
  
 sqlite> insert into todos (title, description, priority, complete) values ("Feed the dog", 'He is getting hungry', 5, False);
 
-> sqlite> .mode column
-> sqlite> select * from todos;
+sqlite> .mode column
+sqlite> select * from todos;
 
 id  title            description            priority  complete
 --  ---------------  ---------------------  --------  --------
@@ -54,8 +58,8 @@ id  title            description            priority  complete
 2   Cut the lawn     Grass is getting long  3         0       
 3   Feed the dog     He is getting hungry   5         0       
 
-> sqlite> .mode markdown
-> sqlite> select * from todos;
+sqlite> .mode markdown
+sqlite> select * from todos;
 
 | id |      title      |      description      | priority | complete |
 |----|-----------------|-----------------------|----------|----------|
@@ -64,8 +68,8 @@ id  title            description            priority  complete
 | 3  | Feed the dog    | He is getting hungry  | 5        | 0        |
 
 
-> sqlite> .mode table
-> sqlite> select * from todos;
+sqlite> .mode table
+sqlite> select * from todos;
 
 +----+-----------------+-----------------------+----------+----------+
 | id |      title      |      description      | priority | complete |
@@ -74,3 +78,4 @@ id  title            description            priority  complete
 | 2  | Cut the lawn    | Grass is getting long | 3        | 0        |
 | 3  | Feed the dog    | He is getting hungry  | 5        | 0        |
 +----+-----------------+-----------------------+----------+----------+
+```
